@@ -1,4 +1,4 @@
-package com.gameswajiha.globetabcurrency
+package com.travel.globetab
 
 import io.flutter.embedding.android.FlutterActivity
 

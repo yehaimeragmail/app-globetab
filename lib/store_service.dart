@@ -13,7 +13,7 @@ import 'app_config.dart';
 ///   `<shortName>pro`      — one-time NON-consumable Pro unlock
 ///   `<shortName>monthly`  — auto-renewable monthly subscription
 ///   `<shortName>yearly`   — auto-renewable yearly subscription
-/// Example (StampMark): stampmarkpro, stampmarkmonthly, stampmarkyearly.
+/// Example (Stamp Mark): stampmarkpro, stampmarkmonthly, stampmarkyearly.
 ///
 /// The products must be created in App Store Connect. Until then (or on
 /// any store error) the service degrades gracefully: a missing product

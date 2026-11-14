@@ -54,21 +54,20 @@ buying works with no code change. Purchases restore across devices
 
 ## Bundle ID scheme — SEO / ASO optimized
 
-Bundle ID = `com.gameswajiha.<appname><mainkeyword>`
+Bundle ID = `com.<category>.<appname>`
 
 Rules:
 - All lowercase. No dots, underscores or hyphens inside the slug.
-- The APP NAME comes FIRST, then ONE main function keyword.
-- The keyword is the one word people search for (what the app does).
+- The CATEGORY WORD comes FIRST (one lowercase Apple category word), then the app name.
+- No 'wajiha' and no 'games' anywhere in the bundle ID.
 
 Examples:
-- stampmark -> `com.gameswajiha.stampmarkwatermark`
-- decibelpro -> `com.gameswajiha.decibelprosoundmeter`
-- billguard -> `com.gameswajiha.billguardsubscriptiontracker`
+- stampmark -> `com.photovideo.stampmark`
+- decibelpro -> `com.utilities.decibelpro`
+- billguard -> `com.finance.billguard`
 
 The full 54-app mapping lives in `../WRAPPER_V2_REPORT.md`.
-StampMark's existing project keeps `com.gameswajiha.stampmark` until the
-re-clone step — do NOT rename it by hand here.
+Bundle IDs follow the Nov 14 scheme (`com.<category>.<appname>`) — do NOT rename them by hand here.
 
 ## JS bridge (AppBridge)
 
@@ -119,7 +118,7 @@ with each product's real price and availability.
    - `assets/app.html`: replace with the app's fixed HTML from `../fixed/`.
    - `ios/Runner/Info.plist`: set `CFBundleDisplayName` to the app name.
    - `ios/Runner.xcodeproj/project.pbxproj`: set `PRODUCT_BUNDLE_IDENTIFIER`
-     to the app's bundle ID (`com.gameswajiha.<shortName><keyword>`) in all
+     to the app's bundle ID (`com.<category>.<shortName>`) in all
      three build configurations (Debug / Release / Profile).
    - Icons: draw the app's 1024x1024 master and regenerate the set with
      `../make_icon.py` (add a `draw_<slug>` function to the script first).

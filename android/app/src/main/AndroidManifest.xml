@@ -11,7 +11,7 @@
     <!-- Camera is optional: devices without one can still install and use the app. -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <application
-        android:label="GlobeTab"
+        android:label="Globe Tab"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
