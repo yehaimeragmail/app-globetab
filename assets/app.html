@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="theme-color" content="#081124" />
+  <meta name="theme-color" content="#F0FDFA" />
   <title>GlobeTab — Offline Currency &amp; Tip Splitter</title>
 
   <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans & JetBrains Mono -->
@@ -96,24 +96,24 @@
        DESIGN TOKENS: TACTILE PASSPORT & FIRST-CLASS BOARDING PASS PALETTE
     ========================================================================= */
     :root {
-      --bg-cobalt: #081124;
-      --bg-indigo: #0E1B36;
-      --bg-card: #132347;
-      --bg-card-elevated: #192D59;
-      --ticket-cloud: #F4F7FB;
-      --ticket-ink: #0B152C;
-      --ticket-muted: #526282;
-      --accent-mint: #00E5B0;
-      --accent-mint-soft: rgba(0, 229, 176, 0.14);
-      --accent-gold: #F4C95D;
-      --accent-gold-soft: rgba(244, 201, 93, 0.15);
-      --accent-coral: #FF6B6B;
-      --text-primary: #F8FAFC;
-      --text-secondary: #9BB0D3;
-      --text-muted: #6278A0;
-      --border-glass: rgba(155, 176, 211, 0.18);
+      --bg-cobalt: #F0FDFA;
+      --bg-indigo: #FFFFFF;
+      --bg-card: #FFFFFF;
+      --bg-card-elevated: #CCFBF1;
+      --ticket-cloud: #FFFFFF;
+      --ticket-ink: #042F2E;
+      --ticket-muted: #475569;
+      --accent-mint: #0D9488;
+      --accent-mint-soft: rgba(13, 148, 136, 0.14);
+      --accent-gold: #F59E0B;
+      --accent-gold-soft: rgba(245, 158, 11, 0.15);
+      --accent-coral: #F59E0B;
+      --text-primary: #042F2E;
+      --text-secondary: #0F766E;
+      --text-muted: #475569;
+      --border-glass: rgba(13, 148, 136, 0.18);
       --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
       --safe-top: env(safe-area-inset-top, 0px);
       --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -129,7 +129,7 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 20% 20%, #152954 0%, #050B18 100%);
+      background: radial-gradient(circle at 20% 20%, #F0FDFA 0%, #CCFBF1 100%);
       font-family: var(--font-sans);
       color: var(--text-primary);
       display: flex;
@@ -156,11 +156,11 @@
         height: 820px;
         max-height: 95dvh;
         border-radius: 44px;
-        border: 6px solid #1C2E54;
+        border: 6px solid #0D9488;
         box-shadow:
           0 34px 90px rgba(0, 0, 0, 0.65),
-          0 0 0 1px rgba(0, 229, 176, 0.22),
-          inset 0 0 24px rgba(0, 229, 176, 0.05);
+          0 0 0 1px rgba(13, 148, 136, 0.22),
+          inset 0 0 24px rgba(13, 148, 136, 0.05);
       }
     }
 
@@ -202,7 +202,7 @@
       width: 96px;
       height: 24px;
       border-radius: 999px;
-      background: #030711;
+      background: #F0FDFA;
       border: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
@@ -214,7 +214,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: radial-gradient(circle, #00E5B0 0%, #0D3B46 70%);
+      background: radial-gradient(circle, #0D9488 0%, #99F6E4 70%);
     }
 
     /* =========================================================================
@@ -224,7 +224,7 @@
       position: absolute;
       inset: 0;
       z-index: 95;
-      background: radial-gradient(circle at 50% 38%, #132957 0%, #081124 72%, #040914 100%);
+      background: radial-gradient(circle at 50% 38%, #FFFFFF 0%, #F0FDFA 72%, #F0FDFA 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -294,9 +294,9 @@
       font-size: 11px;
       font-weight: 800;
       padding: 4px 8px;
-      border-radius: 7px;
-      background: rgba(19, 35, 71, 0.85);
-      border: 1px dashed rgba(0, 229, 176, 0.5);
+      border-radius: 16px;
+      background: rgba(204, 251, 241, 0.85);
+      border: 1px dashed rgba(13, 148, 136, 0.5);
       color: var(--accent-mint);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
       animation: currencyMorph 2.4s ease-in-out infinite;
@@ -317,7 +317,7 @@
       flex-direction: column;
       gap: 9px;
       border-bottom: 1px solid var(--border-glass);
-      background: rgba(8, 17, 36, 0.86);
+      background: rgba(204, 251, 241, 0.86);
       backdrop-filter: blur(12px);
       flex-shrink: 0;
       z-index: 20;
@@ -345,9 +345,9 @@
     .globe-icon-badge {
       width: 34px;
       height: 34px;
-      border-radius: 11px;
-      background: linear-gradient(135deg, rgba(0, 229, 176, 0.22), rgba(244, 201, 93, 0.16));
-      border: 1px solid rgba(0, 229, 176, 0.45);
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(13, 148, 136, 0.22), rgba(245, 158, 11, 0.16));
+      border: 1px solid rgba(13, 148, 136, 0.45);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -362,7 +362,7 @@
       padding: 5px 10px;
       border-radius: 999px;
       background: var(--bg-card);
-      border: 1px solid rgba(244, 201, 93, 0.35);
+      border: 1px solid rgba(245, 158, 11, 0.35);
       color: var(--accent-gold);
       display: inline-flex;
       align-items: center;
@@ -376,7 +376,7 @@
       font-weight: 800;
       padding: 6px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(0, 229, 176, 0.4);
+      border: 1px solid rgba(13, 148, 136, 0.4);
       background: var(--accent-mint-soft);
       color: var(--accent-mint);
       cursor: pointer;
@@ -384,9 +384,9 @@
     }
     .pass-tier-btn:active { transform: scale(0.94); }
     .pass-tier-btn.pro-unlocked {
-      background: linear-gradient(135deg, #F4C95D, #E2A92C);
-      color: #081124;
-      border-color: #F4C95D;
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: #F0FDFA;
+      border-color: #F59E0B;
     }
 
     /* Airplane Mode / Cached Rate Strip */
@@ -394,9 +394,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(19, 35, 71, 0.78);
+      background: rgba(204, 251, 241, 0.78);
       border: 1px solid var(--border-glass);
-      border-radius: 10px;
+      border-radius: 16px;
       padding: 5px 10px;
       font-family: var(--font-mono);
       font-size: 9.5px;
@@ -435,7 +435,7 @@
       font-size: 9px;
       font-weight: 700;
       padding: 2px 6px;
-      border-radius: 5px;
+      border-radius: 16px;
       cursor: pointer;
     }
     .mini-chip-btn:hover { color: var(--text-primary); }
@@ -468,7 +468,7 @@
       position: relative;
       background: var(--bg-card);
       border: 1px solid var(--border-glass);
-      border-radius: 20px;
+      border-radius: 16px;
       padding: 12px 14px;
       display: flex;
       flex-direction: column;
@@ -482,14 +482,14 @@
       justify-content: space-between;
       gap: 10px;
       padding: 6px 8px;
-      border-radius: 14px;
-      background: rgba(8, 17, 36, 0.55);
-      border: 1px solid rgba(155, 176, 211, 0.12);
+      border-radius: 16px;
+      background: rgba(204, 251, 241, 0.55);
+      border: 1px solid rgba(13, 148, 136, 0.12);
     }
 
     .currency-slot.target-slot {
-      background: rgba(0, 229, 176, 0.07);
-      border-color: rgba(0, 229, 176, 0.28);
+      background: rgba(13, 148, 136, 0.07);
+      border-color: rgba(13, 148, 136, 0.28);
     }
 
     .currency-select-btn {
@@ -498,7 +498,7 @@
       gap: 8px;
       background: var(--bg-card-elevated);
       border: 1px solid var(--border-glass);
-      border-radius: 11px;
+      border-radius: 16px;
       padding: 7px 10px;
       color: var(--text-primary);
       cursor: pointer;
@@ -545,22 +545,22 @@
       height: 32px;
       border-radius: 50%;
       background: var(--accent-mint);
-      color: #081124;
+      color: #F0FDFA;
       border: none;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(0, 229, 176, 0.4);
+      box-shadow: 0 4px 14px rgba(13, 148, 136, 0.4);
       transition: transform 0.2s ease;
     }
     .swap-circle-btn:active { transform: rotate(180deg) scale(0.92); }
 
     /* Country Tipping Etiquette Strip inside Convert */
     .etiquette-live-card {
-      background: linear-gradient(135deg, rgba(244, 201, 93, 0.14), rgba(19, 35, 71, 0.92));
-      border: 1px solid rgba(244, 201, 93, 0.32);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.14), rgba(204, 251, 241, 0.92));
+      border: 1px solid rgba(245, 158, 11, 0.32);
       border-radius: 16px;
       padding: 10px 12px;
       display: flex;
@@ -576,9 +576,9 @@
 
     .tip-pill {
       padding: 6px 2px;
-      border-radius: 8px;
+      border-radius: 16px;
       border: 1px solid var(--border-glass);
-      background: rgba(8, 17, 36, 0.65);
+      background: rgba(204, 251, 241, 0.65);
       color: var(--text-secondary);
       font-family: var(--font-mono);
       font-size: 10.5px;
@@ -588,7 +588,7 @@
     }
     .tip-pill.active {
       background: var(--accent-gold);
-      color: #081124;
+      color: #F0FDFA;
       border-color: var(--accent-gold);
       font-weight: 800;
     }
@@ -627,8 +627,8 @@
 
     .key-btn {
       height: 44px;
-      border-radius: 13px;
-      border: 1px solid rgba(155, 176, 211, 0.16);
+      border-radius: 16px;
+      border: 1px solid rgba(13, 148, 136, 0.16);
       background: var(--bg-card);
       color: var(--text-primary);
       font-family: var(--font-display);
@@ -649,14 +649,14 @@
       font-family: var(--font-mono);
       font-size: 12px;
       color: var(--accent-coral);
-      background: rgba(255, 107, 107, 0.1);
-      border-color: rgba(255, 107, 107, 0.25);
+      background: rgba(245, 158, 11, 0.1);
+      border-color: rgba(245, 158, 11, 0.25);
     }
     .key-btn.action-split {
       grid-row: span 2;
       height: 95px;
-      background: linear-gradient(180deg, var(--accent-mint) 0%, #00B88D 100%);
-      color: #081124;
+      background: linear-gradient(180deg, var(--accent-mint) 0%, #0F766E 100%);
+      color: #F0FDFA;
       border: none;
       font-family: var(--font-mono);
       font-size: 11px;
@@ -673,13 +673,13 @@
     .boarding-ticket {
       background: var(--ticket-cloud);
       color: var(--ticket-ink);
-      border-radius: 22px;
+      border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 18px 40px rgba(3, 7, 18, 0.5);
     }
 
     .ticket-top-band {
-      background: linear-gradient(135deg, #0E1B36 0%, #193163 100%);
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%);
       color: #FFFFFF;
       padding: 13px 16px;
       display: flex;
@@ -721,7 +721,7 @@
     }
 
     .ticket-stub {
-      background: #E9EFF7;
+      background: #F0FDFA;
       padding: 13px 16px 16px;
       display: flex;
       flex-direction: column;
@@ -742,13 +742,13 @@
       font-size: 18px;
       font-weight: 700;
       padding: 6px 10px;
-      border-radius: 10px;
+      border-radius: 16px;
       border: 1.5px solid #CBD5E1;
       background: #FFFFFF;
       color: var(--ticket-ink);
       outline: none;
     }
-    .ticket-num-input:focus { border-color: #0E1B36; }
+    .ticket-num-input:focus { border-color: #FFFFFF; }
 
     .stepper-box {
       display: inline-flex;
@@ -756,16 +756,16 @@
       gap: 10px;
       background: #FFFFFF;
       border: 1.5px solid #CBD5E1;
-      border-radius: 10px;
+      border-radius: 16px;
       padding: 4px 8px;
     }
 
     .step-btn {
       width: 26px;
       height: 26px;
-      border-radius: 7px;
+      border-radius: 16px;
       border: none;
-      background: #0E1B36;
+      background: #FFFFFF;
       color: #FFFFFF;
       font-weight: 800;
       font-size: 15px;
@@ -784,9 +784,9 @@
       font-size: 10px;
       font-weight: 700;
       padding: 6px 10px;
-      border-radius: 9px;
+      border-radius: 16px;
       background: var(--bg-card);
-      border: 1px solid rgba(244, 201, 93, 0.35);
+      border: 1px solid rgba(245, 158, 11, 0.35);
       color: var(--accent-gold);
       cursor: pointer;
       white-space: nowrap;
@@ -799,7 +799,7 @@
     .wallet-card {
       background: var(--bg-card);
       border: 1px solid var(--border-glass);
-      border-radius: 18px;
+      border-radius: 16px;
       padding: 13px 14px;
       display: flex;
       flex-direction: column;
@@ -810,7 +810,7 @@
       width: 100%;
       height: 7px;
       border-radius: 999px;
-      background: rgba(8, 17, 36, 0.75);
+      background: rgba(204, 251, 241, 0.75);
       overflow: hidden;
     }
 
@@ -843,11 +843,11 @@
       right: 14px;
       bottom: calc(12px + var(--safe-bottom));
       z-index: 40;
-      background: rgba(13, 25, 51, 0.86);
+      background: rgba(255, 255, 255, 0.86);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(155, 176, 211, 0.24);
-      border-radius: 24px;
+      border: 1px solid rgba(13, 148, 136, 0.24);
+      border-radius: 16px;
       padding: 6px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -860,7 +860,7 @@
       border: none;
       background: transparent;
       color: var(--text-secondary);
-      border-radius: 18px;
+      border-radius: 16px;
       padding: 7px 4px;
       display: flex;
       flex-direction: column;
@@ -876,9 +876,9 @@
 
     .dock-tab.active {
       background: var(--accent-mint);
-      color: #081124;
+      color: #F0FDFA;
       font-weight: 800;
-      box-shadow: 0 4px 14px rgba(0, 229, 176, 0.35);
+      box-shadow: 0 4px 14px rgba(13, 148, 136, 0.35);
     }
 
     .pro-lock-pip {
@@ -889,12 +889,12 @@
       font-size: 7.5px;
       font-weight: 800;
       padding: 1px 4px;
-      border-radius: 4px;
+      border-radius: 16px;
       background: var(--accent-gold);
-      color: #081124;
+      color: #F0FDFA;
     }
     .dock-tab.active .pro-lock-pip {
-      background: #081124;
+      background: #F0FDFA;
       color: var(--accent-gold);
     }
 
@@ -916,9 +916,9 @@
     .bottom-sheet {
       width: 100%;
       max-height: 82%;
-      background: #0E1B36;
-      border-top: 1px solid rgba(0, 229, 176, 0.32);
-      border-radius: 28px 28px 0 0;
+      background: #FFFFFF;
+      border-top: 1px solid rgba(13, 148, 136, 0.32);
+      border-radius: 16px 16px 0 0;
       padding: 14px 18px calc(22px + var(--safe-bottom));
       display: flex;
       flex-direction: column;
@@ -931,7 +931,7 @@
       width: 38px;
       height: 4px;
       border-radius: 999px;
-      background: rgba(155, 176, 211, 0.35);
+      background: rgba(13, 148, 136, 0.35);
       margin: 0 auto 2px;
     }
 
@@ -940,7 +940,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 10px 12px;
-      border-radius: 13px;
+      border-radius: 16px;
       background: var(--bg-card);
       border: 1px solid var(--border-glass);
       color: var(--text-primary);
@@ -948,7 +948,7 @@
     }
     .currency-option-row.selected {
       border-color: var(--accent-mint);
-      background: rgba(0, 229, 176, 0.12);
+      background: rgba(13, 148, 136, 0.12);
     }
 
     /* Toast Banner */
@@ -965,18 +965,23 @@
     }
 
     .toast-msg {
-      background: #0B162E;
+      background: #042F2E;
       border: 1px solid var(--accent-mint);
       color: var(--text-primary);
       font-family: var(--font-mono);
       font-size: 10.5px;
       font-weight: 700;
       padding: 10px 12px;
-      border-radius: 12px;
+      border-radius: 16px;
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
       animation: letterRise 0.22s ease-out;
     }
   </style>
+<style>
+/* BATCH-C THEME: Atlas Teal — appearance-only overrides (colours, font, radii, shadows) */
+body{background:#F0FDFA!important;color:#042F2E!important;font-family:'Space Grotesk',-apple-system,BlinkMacSystemFont,sans-serif!important}
+button{border-radius:16px!important}
+</style>
 </head>
 <body>
 
@@ -997,11 +1002,11 @@
     <div id="splash-screen" onclick="dismissSplash()">
       <!-- Floating Currency Boarding Stamps -->
       <div class="float-currency-stamp" style="top: 14%; left: 10%; animation-delay: 0s;">¥ JPY • 0% TIP</div>
-      <div class="float-currency-stamp" style="top: 20%; right: 9%; animation-delay: 0.45s; color: var(--accent-gold); border-color: rgba(244,201,93,0.5);">€ EUR • PARIS</div>
+      <div class="float-currency-stamp" style="top: 20%; right: 9%; animation-delay: 0.45s; color: var(--accent-gold); border-color: rgba(245, 158, 11,0.5);">€ EUR • PARIS</div>
       <div class="float-currency-stamp" style="bottom: 27%; left: 9%; animation-delay: 0.8s;">£ GBP • LONDON</div>
-      <div class="float-currency-stamp" style="bottom: 22%; right: 10%; animation-delay: 1.15s; color: var(--accent-gold); border-color: rgba(244,201,93,0.5);">฿ THB • BANGKOK</div>
+      <div class="float-currency-stamp" style="bottom: 22%; right: 10%; animation-delay: 1.15s; color: var(--accent-gold); border-color: rgba(245, 158, 11,0.5);">฿ THB • BANGKOK</div>
 
-      <div class="mono" style="font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--accent-mint); background: rgba(0, 229, 176, 0.1); border: 1px solid rgba(0, 229, 176, 0.3); padding: 5px 12px; border-radius: 999px;">
+      <div class="mono" style="font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--accent-mint); background: rgba(13, 148, 136, 0.1); border: 1px solid rgba(13, 148, 136, 0.3); padding: 5px 12px; border-radius: 999px;">
         FIRST-CLASS OFFLINE FX ENGINE
       </div>
 
@@ -1010,39 +1015,39 @@
         <div style="position: relative; width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
           <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Outer Flight Orbit Ring -->
-            <circle cx="90" cy="90" r="78" stroke="rgba(0, 229, 176, 0.32)" stroke-width="1.5" stroke-dasharray="4 6" class="flight-arc-dash"/>
-            <circle cx="90" cy="90" r="64" stroke="rgba(244, 201, 93, 0.24)" stroke-width="1"/>
+            <circle cx="90" cy="90" r="78" stroke="rgba(13, 148, 136, 0.32)" stroke-width="1.5" stroke-dasharray="4 6" class="flight-arc-dash"/>
+            <circle cx="90" cy="90" r="64" stroke="rgba(245, 158, 11, 0.24)" stroke-width="1"/>
 
             <!-- Globe Sphere -->
-            <circle cx="90" cy="90" r="52" fill="url(#globeGrad)" stroke="#00E5B0" stroke-width="2"/>
+            <circle cx="90" cy="90" r="52" fill="url(#globeGrad)" stroke="#0D9488" stroke-width="2"/>
 
             <!-- Latitude Parallels -->
-            <ellipse cx="90" cy="68" rx="46" ry="10" stroke="rgba(0, 229, 176, 0.38)" stroke-width="1.2"/>
-            <line x1="38" y1="90" x2="142" y2="90" stroke="rgba(0, 229, 176, 0.55)" stroke-width="1.3"/>
-            <ellipse cx="90" cy="112" rx="46" ry="10" stroke="rgba(0, 229, 176, 0.38)" stroke-width="1.2"/>
+            <ellipse cx="90" cy="68" rx="46" ry="10" stroke="rgba(13, 148, 136, 0.38)" stroke-width="1.2"/>
+            <line x1="38" y1="90" x2="142" y2="90" stroke="rgba(13, 148, 136, 0.55)" stroke-width="1.3"/>
+            <ellipse cx="90" cy="112" rx="46" ry="10" stroke="rgba(13, 148, 136, 0.38)" stroke-width="1.2"/>
 
             <!-- Animated Rotating Longitude Meridians -->
-            <ellipse cx="90" cy="90" rx="26" ry="52" stroke="rgba(0, 229, 176, 0.65)" stroke-width="1.4" class="globe-meridian-1"/>
-            <ellipse cx="90" cy="90" rx="42" ry="52" stroke="rgba(244, 201, 93, 0.45)" stroke-width="1.2" class="globe-meridian-2"/>
-            <line x1="90" y1="38" x2="90" y2="142" stroke="rgba(0, 229, 176, 0.45)" stroke-width="1.2"/>
+            <ellipse cx="90" cy="90" rx="26" ry="52" stroke="rgba(13, 148, 136, 0.65)" stroke-width="1.4" class="globe-meridian-1"/>
+            <ellipse cx="90" cy="90" rx="42" ry="52" stroke="rgba(245, 158, 11, 0.45)" stroke-width="1.2" class="globe-meridian-2"/>
+            <line x1="90" y1="38" x2="90" y2="142" stroke="rgba(13, 148, 136, 0.45)" stroke-width="1.2"/>
 
             <!-- Orbiting Jet with Glowing Mint Contrail -->
             <g class="orbit-rotator">
               <path d="M90 12 A78 78 0 0 0 28 45" stroke="url(#contrailGrad)" stroke-width="3" stroke-linecap="round"/>
               <g transform="translate(90, 12)">
-                <path d="M10 0 L-5 -6 L-2 0 L-5 6 Z" fill="#F4C95D"/>
-                <circle cx="9" cy="0" r="2.2" fill="#00E5B0"/>
+                <path d="M10 0 L-5 -6 L-2 0 L-5 6 Z" fill="#F59E0B"/>
+                <circle cx="9" cy="0" r="2.2" fill="#0D9488"/>
               </g>
             </g>
 
             <defs>
               <radialGradient id="globeGrad" cx="35%" cy="30%" r="70%">
                 <stop offset="0%" stop-color="#1E3F7A"/>
-                <stop offset="100%" stop-color="#081124"/>
+                <stop offset="100%" stop-color="#F0FDFA"/>
               </radialGradient>
               <linearGradient id="contrailGrad" x1="90" y1="12" x2="28" y2="45" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#00E5B0"/>
-                <stop offset="100%" stop-color="#00E5B0" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#0D9488"/>
+                <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
               </linearGradient>
             </defs>
           </svg>
@@ -1178,7 +1183,7 @@
             <span class="mono" style="font-size: 9.5px; font-weight: 800; color: var(--accent-gold); letter-spacing: 0.04em;">
               LOCAL TIP ETIQUETTE • <span id="etiquette-country-label">JAPAN</span>
             </span>
-            <span id="etiquette-rec-badge" class="mono" style="font-size: 9.5px; font-weight: 800; background: rgba(244,201,93,0.2); color: var(--accent-gold); padding: 2px 7px; border-radius: 5px;">
+            <span id="etiquette-rec-badge" class="mono" style="font-size: 9.5px; font-weight: 800; background: rgba(245, 158, 11,0.2); color: var(--accent-gold); padding: 2px 7px; border-radius: 16px;">
               REC: 0%
             </span>
           </div>
@@ -1254,7 +1259,7 @@
             </div>
             <div style="text-align: right;">
               <div id="ticket-route-code" class="mono" style="font-size: 13px; font-weight: 800; color: var(--accent-gold);">TYO → USD</div>
-              <div class="mono" style="font-size: 9px; color: #9BB0D3;">SEAT: GROUP</div>
+              <div class="mono" style="font-size: 9px; color: #0F766E;">SEAT: GROUP</div>
             </div>
           </div>
 
@@ -1274,7 +1279,7 @@
                 <div style="font-size: 12.5px; font-weight: 800;">Local Tax / VAT (+8%)</div>
                 <div class="mono" style="font-size: 10px; color: var(--ticket-muted);">Toggle if tax isn't included</div>
               </div>
-              <button id="split-tax-toggle" onclick="toggleSplitTax()" class="mono" style="padding: 6px 11px; border-radius: 9px; border: 1.5px solid #CBD5E1; background: #FFFFFF; color: var(--ticket-ink); font-size: 11px; font-weight: 800; cursor: pointer;">
+              <button id="split-tax-toggle" onclick="toggleSplitTax()" class="mono" style="padding: 6px 11px; border-radius: 16px; border: 1.5px solid #CBD5E1; background: #FFFFFF; color: var(--ticket-ink); font-size: 11px; font-weight: 800; cursor: pointer;">
                 OFF (0%)
               </button>
             </div>
@@ -1318,10 +1323,10 @@
               <span id="split-grand-total-line" class="mono" style="font-size: 10px; font-weight: 700; color: var(--ticket-muted);">Total: ¥4,840</span>
             </div>
 
-            <div style="display: flex; align-items: baseline; justify-content: space-between; background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 14px; padding: 11px 13px;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 16px; padding: 11px 13px;">
               <div>
                 <div class="mono" style="font-size: 9.5px; font-weight: 800; color: var(--ticket-muted);">LOCAL AMOUNT</div>
-                <div id="split-each-local" class="display-num" style="font-size: 24px; font-weight: 700; color: #081124;">¥2,420</div>
+                <div id="split-each-local" class="display-num" style="font-size: 24px; font-weight: 700; color: #F0FDFA;">¥2,420</div>
               </div>
               <div style="text-align: right;">
                 <div class="mono" style="font-size: 9.5px; font-weight: 800; color: #059669;">HOME EQUIVALENT</div>
@@ -1331,10 +1336,10 @@
 
             <!-- Export Boarding Pass PNG / Log to Trip Wallet -->
             <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 8px; margin-top: 2px;">
-              <button onclick="logSplitToTripWallet()" style="padding: 11px 10px; border-radius: 12px; border: 1.5px solid #0E1B36; background: #FFFFFF; color: #0E1B36; font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; cursor: pointer;">
+              <button onclick="logSplitToTripWallet()" style="padding: 11px 10px; border-radius: 16px; border: 1.5px solid #FFFFFF; background: #FFFFFF; color: #FFFFFF; font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; cursor: pointer;">
                 + LOG TO WALLET
               </button>
-              <button onclick="downloadBoardingPassPNG()" style="padding: 11px 10px; border-radius: 12px; border: none; background: #0E1B36; color: #00E5B0; font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; cursor: pointer;">
+              <button onclick="downloadBoardingPassPNG()" style="padding: 11px 10px; border-radius: 16px; border: none; background: #FFFFFF; color: #0D9488; font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; cursor: pointer;">
                 ↓ SHARE PNG STUB
               </button>
             </div>
@@ -1352,7 +1357,7 @@
               <div class="mono" style="font-size: 9.5px; font-weight: 800; color: var(--accent-mint);">MULTI-DESTINATION TRIP WALLETS</div>
               <div class="display-num" style="font-size: 18px; font-weight: 700; margin-top: 2px;">World Tour 2026</div>
             </div>
-            <button onclick="openAddWalletSheet()" style="padding: 8px 11px; border-radius: 11px; border: none; background: var(--accent-mint); color: #081124; font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; cursor: pointer;">
+            <button onclick="openAddWalletSheet()" style="padding: 8px 11px; border-radius: 16px; border: none; background: var(--accent-mint); color: #F0FDFA; font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; cursor: pointer;">
               + ADD CITY
             </button>
           </div>
@@ -1370,7 +1375,7 @@
       <section id="view-etiquette" class="screen-view">
         <div class="dual-currency-card" style="padding: 12px 14px;">
           <div class="mono" style="font-size: 9.5px; font-weight: 800; color: var(--accent-gold);">OFFLINE GLOBAL TIPPING COMPENDIUM</div>
-          <input id="etiquette-search-input" type="text" placeholder="Search country, currency, or city (e.g., Japan, EUR)…" oninput="renderEtiquetteGuide()" style="width: 100%; padding: 9px 12px; border-radius: 11px; border: 1px solid var(--border-glass); background: rgba(8,17,36,0.75); color: var(--text-primary); font-family: var(--font-sans); font-size: 12.5px; outline: none;" />
+          <input id="etiquette-search-input" type="text" placeholder="Search country, currency, or city (e.g., Japan, EUR)…" oninput="renderEtiquetteGuide()" style="width: 100%; padding: 9px 12px; border-radius: 16px; border: 1px solid var(--border-glass); background: rgba(204, 251, 241,0.75); color: var(--text-primary); font-family: var(--font-sans); font-size: 12.5px; outline: none;" />
         </div>
 
         <div id="etiquette-cards-list" style="display: flex; flex-direction: column; gap: 9px;"></div>
@@ -1434,7 +1439,7 @@
       <div class="bottom-sheet no-scrollbar">
         <div class="sheet-grabber"></div>
         <div style="display: flex; align-items: center; justify-content: space-between;">
-          <span class="mono" style="font-size: 10px; font-weight: 800; background: var(--accent-gold); color: #081124; padding: 4px 9px; border-radius: 6px;">
+          <span class="mono" style="font-size: 10px; font-weight: 800; background: var(--accent-gold); color: #F0FDFA; padding: 4px 9px; border-radius: 16px;">
             FIRST-CLASS TRAVELER PASS
           </span>
           <button onclick="closeSheet('upgrade-sheet')" class="mini-chip-btn" style="padding: 5px 9px;">✕</button>
@@ -1444,10 +1449,10 @@
           Split Group Bills, Scan Receipts &amp; Manage Multi-Currency Trip Wallets
         </h2>
 
-        <div id="upgrade-reason-banner" style="display: none; font-size: 11.5px; font-weight: 600; color: var(--accent-gold); background: var(--accent-gold-soft); border: 1px solid rgba(244,201,93,0.35); padding: 9px 11px; border-radius: 11px;"></div>
+        <div id="upgrade-reason-banner" style="display: none; font-size: 11.5px; font-weight: 600; color: var(--accent-gold); background: var(--accent-gold-soft); border: 1px solid rgba(245, 158, 11,0.35); padding: 9px 11px; border-radius: 16px;"></div>
 
         <div style="display: flex; flex-direction: column; gap: 9px; font-size: 12.5px;">
-          <div style="display: flex; gap: 10px; align-items: flex-start; background: var(--bg-card); padding: 10px 12px; border-radius: 13px; border: 1px solid var(--border-glass);">
+          <div style="display: flex; gap: 10px; align-items: flex-start; background: var(--bg-card); padding: 10px 12px; border-radius: 16px; border: 1px solid var(--border-glass);">
             <span style="font-size: 18px;">🎫</span>
             <div>
               <strong style="display: block;">Boarding-Pass Group Bill Splitter &amp; PNG Stubs</strong>
@@ -1455,7 +1460,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 10px; align-items: flex-start; background: var(--bg-card); padding: 10px 12px; border-radius: 13px; border: 1px solid var(--border-glass);">
+          <div style="display: flex; gap: 10px; align-items: flex-start; background: var(--bg-card); padding: 10px 12px; border-radius: 16px; border: 1px solid var(--border-glass);">
             <span style="font-size: 18px;">🌍</span>
             <div>
               <strong style="display: block;">Multi-Currency Trip Wallets</strong>
@@ -1463,7 +1468,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 10px; align-items: flex-start; background: var(--bg-card); padding: 10px 12px; border-radius: 13px; border: 1px solid var(--border-glass);">
+          <div style="display: flex; gap: 10px; align-items: flex-start; background: var(--bg-card); padding: 10px 12px; border-radius: 16px; border: 1px solid var(--border-glass);">
             <span style="font-size: 18px;">📷</span>
             <div>
               <strong style="display: block;">Offline Paper Receipt Scanner Presets</strong>
@@ -1472,7 +1477,7 @@
           </div>
         </div>
 
-        <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(0, 229, 176, 0.1); border: 1px solid rgba(0, 229, 176, 0.35); border-radius: 14px; padding: 11px 14px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(13, 148, 136, 0.1); border: 1px solid rgba(13, 148, 136, 0.35); border-radius: 16px; padding: 11px 14px;">
           <div>
             <div class="mono" style="font-size: 9.5px; color: var(--accent-mint); font-weight: 800;">TRAVELER PASS SUBSCRIPTION</div>
             <div class="display-num" style="font-size: 22px; font-weight: 700;">$0.99 <span style="font-size: 12px; font-weight: 500; color: var(--text-secondary);">/ month</span></div>
@@ -1480,7 +1485,7 @@
           <span class="mono" style="font-size: 9.5px; color: var(--text-secondary);">FREE: 1 PAIR + ETIQUETTE</span>
         </div>
 
-        <button id="activate-pass-btn" onclick="toggleTravelerPassDemo()" style="width: 100%; padding: 14px; border-radius: 14px; border: none; background: linear-gradient(135deg, var(--accent-mint), #00B88D); color: #081124; font-family: var(--font-mono); font-size: 12px; font-weight: 800; cursor: pointer; box-shadow: 0 8px 24px rgba(0, 229, 176, 0.35);">
+        <button id="activate-pass-btn" onclick="toggleTravelerPassDemo()" style="width: 100%; padding: 14px; border-radius: 16px; border: none; background: linear-gradient(135deg, var(--accent-mint), #0F766E); color: #F0FDFA; font-family: var(--font-mono); font-size: 12px; font-weight: 800; cursor: pointer; box-shadow: 0 8px 24px rgba(13, 148, 136, 0.35);">
           ACTIVATE TRAVELER PASS ($0.99/MO DEMO)
         </button>
       </div>
@@ -1700,7 +1705,7 @@
       const container = document.getElementById('splash-title-letters');
       const title = 'GlobeTab';
       container.innerHTML = title.split('').map((ch, idx) => {
-        const color = idx >= 5 ? 'var(--accent-mint)' : '#F8FAFC';
+        const color = idx >= 5 ? 'var(--accent-mint)' : '#042F2E';
         const delay = (0.14 + idx * 0.05).toFixed(2);
         return `<span class="splash-char" style="color:${color}; animation-delay:${delay}s;">${ch}</span>`;
       }).join('');
@@ -2012,8 +2017,8 @@
 
       const taxBtn = document.getElementById('split-tax-toggle');
       taxBtn.textContent = splitTaxEnabled ? 'ON (+8%)' : 'OFF (0%)';
-      taxBtn.style.background = splitTaxEnabled ? '#0E1B36' : '#FFFFFF';
-      taxBtn.style.color = splitTaxEnabled ? '#00E5B0' : '#0B152C';
+      taxBtn.style.background = splitTaxEnabled ? '#FFFFFF' : '#FFFFFF';
+      taxBtn.style.color = splitTaxEnabled ? '#0D9488' : '#042F2E';
 
       document.getElementById('split-tip-val').textContent = `${splitTipPct}%`;
       document.getElementById('split-people-val').textContent = splitPeople;
@@ -2054,22 +2059,22 @@
       const ctx = canvas.getContext('2d');
 
       // Deep Aviation Cobalt Background
-      ctx.fillStyle = '#081124';
+      ctx.fillStyle = '#F0FDFA';
       ctx.fillRect(0, 0, 760, 540);
 
       // Cloud White Boarding Pass Card
-      ctx.fillStyle = '#F4F7FB';
+      ctx.fillStyle = '#FFFFFF';
       ctx.beginPath();
       ctx.roundRect(40, 36, 680, 468, 28);
       ctx.fill();
 
       // Header Band
-      ctx.fillStyle = '#0E1B36';
+      ctx.fillStyle = '#FFFFFF';
       ctx.beginPath();
       ctx.roundRect(40, 36, 680, 96, [28, 28, 0, 0]);
       ctx.fill();
 
-      ctx.fillStyle = '#00E5B0';
+      ctx.fillStyle = '#0D9488';
       ctx.font = '800 16px monospace';
       ctx.fillText('GLOBETAB • FIRST-CLASS GROUP SPLIT PASS', 72, 74);
 
@@ -2077,20 +2082,20 @@
       ctx.font = '700 28px sans-serif';
       ctx.fillText(calc.merchant.slice(0, 28), 72, 110);
 
-      ctx.fillStyle = '#F4C95D';
+      ctx.fillStyle = '#F59E0B';
       ctx.font = '800 22px monospace';
       ctx.textAlign = 'right';
       ctx.fillText(`${fromInfo.airport} ✈ ${toInfo.code}`, 688, 96);
       ctx.textAlign = 'left';
 
       // Breakdown Rows
-      ctx.fillStyle = '#526282';
+      ctx.fillStyle = '#475569';
       ctx.font = '700 18px monospace';
       ctx.fillText(`SUBTOTAL (${fromInfo.code}):`, 72, 182);
       ctx.fillText(`TAX & TIP (${splitTipPct}%):`, 72, 222);
       ctx.fillText(`TRAVELERS SPLITTING:`, 72, 262);
 
-      ctx.fillStyle = '#0B152C';
+      ctx.fillStyle = '#042F2E';
       ctx.textAlign = 'right';
       ctx.fillText(formatMoney(calc.subtotal, fromInfo.code), 688, 182);
       ctx.fillText(formatMoney(calc.tax + calc.tip, fromInfo.code), 688, 222);
@@ -2108,7 +2113,7 @@
       ctx.setLineDash([]);
 
       // Each Traveler Pays Box
-      ctx.fillStyle = '#526282';
+      ctx.fillStyle = '#475569';
       ctx.font = '800 15px monospace';
       ctx.fillText('EACH TRAVELER PAYS (LOCAL)', 72, 354);
       ctx.textAlign = 'right';
@@ -2116,7 +2121,7 @@
       ctx.fillText(`HOME EQUIVALENT (${toInfo.code})`, 688, 354);
       ctx.textAlign = 'left';
 
-      ctx.fillStyle = '#081124';
+      ctx.fillStyle = '#F0FDFA';
       ctx.font = '700 44px sans-serif';
       ctx.fillText(formatMoney(calc.eachLocal, fromInfo.code), 72, 408);
 
@@ -2162,7 +2167,7 @@
                   <div class="mono" style="font-size:10px; color:var(--text-secondary);">${escapeHTML(w.note)}</div>
                 </div>
               </div>
-              <button onclick="quickAddWalletExpense('${w.id}')" class="mini-chip-btn" style="padding:5px 9px; color:var(--accent-mint); border-color:rgba(0,229,176,0.35);">
+              <button onclick="quickAddWalletExpense('${w.id}')" class="mini-chip-btn" style="padding:5px 9px; color:var(--accent-mint); border-color:rgba(13, 148, 136,0.35);">
                 + EXPENSE
               </button>
             </div>
@@ -2270,7 +2275,7 @@
                 <div style="font-size:13.5px; font-weight:800;">${c.country} <span class="mono" style="font-size:10.5px; color:var(--text-secondary);">(${c.code})</span></div>
               </div>
             </div>
-            <span class="mono" style="font-size:9.5px; font-weight:800; padding:3px 7px; border-radius:6px; background:${c.recTip === 0 ? 'rgba(0,229,176,0.14)' : 'rgba(244,201,93,0.18)'}; color:${c.recTip === 0 ? 'var(--accent-mint)' : 'var(--accent-gold)'};">
+            <span class="mono" style="font-size:9.5px; font-weight:800; padding:3px 7px; border-radius: 16px; background:${c.recTip === 0 ? 'rgba(13, 148, 136,0.14)' : 'rgba(245, 158, 11,0.18)'}; color:${c.recTip === 0 ? 'var(--accent-mint)' : 'var(--accent-gold)'};">
               ${c.tipRange}
             </span>
           </div>
